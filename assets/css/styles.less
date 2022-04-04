@@ -1,0 +1,92 @@
+/* ----------- */
+/* Variables */
+/* ------------ */
+
+/* Colores */
+@negro-custom: #141618;
+@blanco: #fff;
+@texto-oscuro: #303133;
+@texto-claro: #777;
+@dorado: #b4975a;
+@gris-claro: #eaeaea;
+
+/* --------------- */
+/* Fuentes */
+/* --------------- */
+@fuente-principal: "Playfair Display", serif;
+@fuente-secundaria: "Poppins", serif;
+
+/* --------------- */
+/* Generales */
+/* --------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: @fuente-principal;
+  color: @texto-oscuro;
+}
+
+.container {
+  width: 90%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+img {
+  vertical-align: top;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: @texto-oscuro;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: fade(@texto-oscuro, 50%);
+  }
+}
+
+/* --------------- */
+/* Encabezado */
+/* --------------- */
+header {
+  .menu-bar-pc {
+    background: @blanco;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    padding: 0 2.25rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 5.875rem;
+    border-bottom: 1px solid @gris-claro;
+
+    .logo {
+      max-width: 3.125rem;
+    }
+    .menu-principal {
+      a {
+        padding: 0 0.5625rem;
+      }
+      .top-redes {
+        a {
+          padding: 0 0.5625rem;
+        }
+      }
+    }
+  }
+}
