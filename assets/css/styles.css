@@ -82,7 +82,63 @@ header .menu-bar-pc .menu-principal a {
   padding: 0 0.5625rem;
 }
 header .menu-bar-pc .menu-principal .top-redes a {
+  padding: 0 0.9rem;
+}
+header .fa-brands {
   padding: 0 0.5625rem;
+}
+header .menu-bar-movil {
+  background: #fff;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  padding: 0 2.25rem;
+  display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 5.875rem;
+  border-bottom: 1px solid #eaeaea;
+}
+header .menu-bar-movil .logo {
+  max-width: 3.125rem;
+}
+header .menu-bar-movil .burger-menu {
+  cursor: pointer;
+  font-size: 2.1875rem;
+}
+header .menu-bar-movil .slideMenu {
+  position: fixed;
+  top: 5.875rem;
+  left: -80%;
+  background: #fff;
+  text-align: center;
+  padding: 1.25rem 2.25rem;
+  width: -80%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+header .menu-bar-movil .slideMenu:active {
+  left: 0;
+}
+header .menu-bar-movil .slideMenu .top-redes {
+  margin-bottom: 0.625rem;
+}
+header .menu-bar-movil .slideMenu .top-redes a {
+  padding: 0 0.5625rem;
+}
+header .menu-bar-movil .slideMenu .menu-principal a {
+  display: block;
+  padding: 0.625rem 0;
+  border-top: 1px solid #eaeaea;
 }
 /* --------------- */
 /* Main */
@@ -523,10 +579,11 @@ footer {
   color: #fff;
 }
 footer .bottom-redes {
+  padding-top: 2rem;
   margin-bottom: 2.25rem;
 }
 footer .bottom-redes a {
-  padding: 0.5625rem;
+  padding: 0 0.5625rem;
   color: #fff;
   transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -534,4 +591,99 @@ footer .bottom-redes a {
 }
 footer .bottom-redes a:hover {
   color: #b4975a;
+}
+/* --------------- */
+/* Media Queries */
+/* --------------- */
+@media all and (max-width: 1500px) {
+  .main .portada .col .texto {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+}
+@media all and (max-width: 1199px) {
+  .main .portada .col .foto {
+    display: none;
+  }
+  .main .portada .col .texto {
+    width: 100%;
+  }
+}
+@media all and (max-width: 980px) {
+  .main .nosotros .container .col.izq {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #eaeaea;
+    text-align: center;
+    display: block;
+    padding: 0;
+    margin-bottom: 2.25rem;
+  }
+  .main .nosotros .container .col.der {
+    width: 100%;
+    padding-left: 0;
+    text-align: justify;
+  }
+  .main .contacto .datos .container .blurb {
+    width: 100%;
+    max-width: 40.625rem;
+    margin: 0 auto;
+    margin-bottom: 2.25rem;
+  }
+  .main .contacto .datos .container .blurb:last-child {
+    margin-bottom: 0;
+  }
+}
+@media all and (max-width: 800px) {
+  header .menu-bar-pc {
+    display: none;
+  }
+  header .menu-bar-movil {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .main .portada .col {
+    width: 100%;
+  }
+  .main .portada .col .foto-full.izq {
+    display: none;
+  }
+  .main .portada .col .texto h2 {
+    text-align: center;
+  }
+  .main .portada .col .texto p {
+    text-align: justify;
+  }
+  .main .chef .container .col {
+    width: 100%;
+  }
+  .main .chef .container .col .titulo-seccion {
+    padding-left: 0;
+    padding-bottom: 0;
+    text-align: center;
+  }
+}
+@media all and (max-width: 580px) {
+  .titulo-seccion h2 {
+    font-size: 2rem;
+  }
+  .main .nosotros .container .col.der .texto p {
+    font-size: 1rem;
+  }
+  .main .chef .container .col .titulo-seccion p {
+    font-size: 1rem;
+  }
+  .main .menu_platos .container .contenedor-menu .contenido .item .col.izq {
+    width: 100%;
+    text-align: justify;
+    margin-bottom: 0.625rem;
+  }
+  .main .menu_platos .container .contenedor-menu .contenido .item .col.der {
+    width: 100%;
+    text-align: end;
+  }
+  .main .contacto .formulario .formulario_contacto input[type="submit"] {
+    width: 100%;
+  }
 }
