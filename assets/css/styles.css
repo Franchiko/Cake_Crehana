@@ -467,6 +467,7 @@ header .menu-bar-movil .slideMenu .menu-principal a {
   background-image: url(../img/contacto-bg.jpg);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 .main .contacto .datos .overlay {
   position: absolute;
